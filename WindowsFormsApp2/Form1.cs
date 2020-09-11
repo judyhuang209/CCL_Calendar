@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.ApplicationBlocks.Data;
 
 namespace WindowsFormsApp2
 {
@@ -110,6 +111,7 @@ namespace WindowsFormsApp2
 
 
                 // Fetch Holiday data table
+                
                 String strSQL = "select EYHoliday_Name, EYHoliday_Date " +
                           "from Holiday_EY " +
                           "order by EYHoliday_Date desc";
@@ -117,19 +119,22 @@ namespace WindowsFormsApp2
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 DataSet dataSet = new DataSet("Schedules");
                 adapter.SelectCommand = new SqlCommand(strSQL, cnn);
-                // Fill in data set
                 adapter.Fill(dataSet, "Holiday_EY");
                 Table_Holiday = dataSet.Tables["Holiday_EY"];
 
+
                 // Fetch Personal Holiday data table
+                /*
                 strSQL = "select Category as Event, VacationFrom as StartTime, VacationTo as EndTime, UpdateTime " +
                          "from Holiday_Date_Table " +
                          "where EmpID = '103213' " +
                          "order by VacationFrom desc";
-                adapter.SelectCommand = new SqlCommand(strSQL, cnn);
+                */
+                // adapter.SelectCommand = new SqlCommand(strSQL, cnn);
                 // Fill in data set
-                adapter.Fill(dataSet, "Holiday_Per");
-                Table_Holiday_Per = dataSet.Tables["Holiday_Per"];
+                // adapter.Fill(dataSet, "Holiday_Per");
+                // Table_Holiday_Per = dataSet.Tables["Holiday_Per"];
+                Table_Holiday_Per = SqlHelper.ExecuteDataset(cnn, "xsp_Calendar_Holiday", new object[] { "103213" }).Tables[0];
 
                 // Fetch Personal Event data table
                 strSQL = // "insert into Holiday_Date_Table " +
@@ -374,33 +379,6 @@ namespace WindowsFormsApp2
         }
 
         Control sourceControl = null;
-
-        /*
-        private void day_MouseDown(object sender, MouseEventArgs e)
-        {
-            Point mouseDownLocation = new Point(e.X, e.Y);
-            sourceControl = day_busy_MenuStrip.SourceControl;
-            if (sourceControl == null)
-                sourceControl = day_free_MenuStrip.SourceControl;
-                
-            switch (e.Button)
-            {
-                case MouseButtons.Left:
-                    break;
-                case MouseButtons.Right:
-                    
-                    if (sourceControl.Controls == null)
-                    {
-                        sourceControl.ContextMenuStrip = day_MenuStrip1;
-                    }
-                    else
-                    {
-                        sourceControl.ContextMenuStrip = day_MenuStrip2;
-                    }
-                    break;    
-            }
-        }
-        */
 
 
         private void day_busy_MenuStrip_Opened(object sender, EventArgs e)
