@@ -50,8 +50,6 @@ namespace WindowsFormsApp2
             DateTime recordDate = DateTime.Now;
             String text = textBox1.Text;
             String AgentID = "103213";
-            Console.WriteLine(taskStartTime);
-            Console.WriteLine(textBox1.Text);
 
             String connStr = "";
             SqlConnection cnn;
@@ -62,18 +60,33 @@ namespace WindowsFormsApp2
                 cnn.Open();
 
                 // Fetch Personal Event data table
-                String strSQL = "insert into Calendar_PersonalEvent " +
+                String strSQL = // "insert into Holiday_Date_Table " +
+                                "select PersonalEvent, StartTime, EndTime, RecordDate " +
+                                "from Calendar_PersonalEvent " +
+                                "where AgentID = '103213' " +
+                                "order by StartTime desc";
+                DataSet dataSet = new DataSet("Temp");
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = new SqlCommand(strSQL, cnn);
+                adapter.Fill(dataSet, "Personal");
+
+                strSQL = "insert into Calendar_PersonalEvent " +
                                 "(AgentID, PersonalEvent, StartTime, EndTime, RecordDate)" +
                                 "values (@AgentID, @text, @taskStartTime, @taskEndTime, @recordDate)";
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                
+ 
+                adapter.InsertCommand = new SqlCommand(strSQL, cnn);
                 adapter.InsertCommand.Parameters.Add("@AgentID", SqlDbType.VarChar).Value = AgentID;
                 adapter.InsertCommand.Parameters.Add("@text", SqlDbType.NVarChar).Value = text;
                 adapter.InsertCommand.Parameters.Add("@taskStartTime", SqlDbType.SmallDateTime).Value = taskStartTime;
                 adapter.InsertCommand.Parameters.Add("@taskEndTime", SqlDbType.SmallDateTime).Value = taskEndTime;
                 adapter.InsertCommand.Parameters.Add("@recordDate", SqlDbType.SmallDateTime).Value = recordDate;
+                adapter.InsertCommand.ExecuteNonQuery();
+                adapter.Update(dataSet, "Personal");
 
-                adapter.InsertCommand = new SqlCommand(strSQL, cnn);
+                Console.WriteLine(taskStartTime);
+                Console.WriteLine(taskEndTime);
+
+                
                 cnn.Close();
                 this.Close();
 
