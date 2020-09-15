@@ -183,8 +183,7 @@ namespace WindowsFormsApp2
                 };
 
                 DayOffOrNot(dateTimePicker1.Value, Table_Holiday);
-                SectionOffOrNot(dateTimePicker1.Value, Table_Holiday_Per);
-                SectionOffOrNot(dateTimePicker1.Value, Table_Personal);
+                SectionOffOrNot(dateTimePicker1.Value, Table_Holiday_Per, Table_Personal);
 
             }
             catch (Exception ex)
@@ -347,10 +346,29 @@ namespace WindowsFormsApp2
 
         }
 
-        private void SectionOffOrNot(DateTime DateToday, DataTable Table)
+        private void SectionOffOrNot(DateTime DateToday, DataTable Table1, DataTable Table2)
         {
             EnableSection();
-            foreach (DataRow row in Table.Rows)
+            foreach (DataRow row in Table1.Rows)
+            {
+                // check if date today is holiday
+                DateTime startTime = (DateTime)row[1];
+                DateTime endTime = (DateTime)row[2];
+                String OffDate = startTime.ToShortDateString();
+
+                if (DateToday.ToShortDateString() == OffDate)
+                {
+                    String temp = startTime.ToString("HH");
+                    int start = Int32.Parse(temp);
+                    temp = endTime.ToString("HH");
+                    int end = Int32.Parse(temp);
+                    DisableSection(start, end, listCell, row[0].ToString());
+                    break;
+                }
+                // String HolidayType = row["Type"].ToString();
+                // String HolidayNote = row["Note"].ToString();
+            }
+            foreach (DataRow row in Table2.Rows)
             {
                 // check if date today is holiday
                 DateTime startTime = (DateTime)row[1];
@@ -377,8 +395,7 @@ namespace WindowsFormsApp2
         {
             // MessageBox.Show("You are in the DateTimePicker.ValueChanged event.");
             DayOffOrNot(dateTimePicker1.Value, Table_Holiday);
-            SectionOffOrNot(dateTimePicker1.Value, Table_Holiday_Per);
-            SectionOffOrNot(dateTimePicker1.Value, Table_Personal);
+            SectionOffOrNot(dateTimePicker1.Value, Table_Holiday_Per, Table_Personal);
 
         }
 
