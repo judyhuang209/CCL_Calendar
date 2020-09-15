@@ -39,3 +39,17 @@ C:\Users\wasn\Source\Repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsA
 C:\Users\wasn\Source\Repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CopyComplete
 C:\Users\wasn\Source\Repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\wasn\Source\Repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form_add.resources
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CopyComplete
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\judy.huang\source\repos\CCL_Calendar\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb

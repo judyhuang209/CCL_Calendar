@@ -18,26 +18,6 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        private void startTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void endTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void startDatePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void endDatePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -45,6 +25,8 @@ namespace WindowsFormsApp2
 
         private void button_confirm_Click(object sender, EventArgs e)
         {
+
+
             DateTime taskStartTime = startDatePicker.Value.Date + startTimePicker.Value.TimeOfDay;
             DateTime taskEndTime = endDatePicker.Value.Date + endTimePicker.Value.TimeOfDay;
             DateTime recordDate = DateTime.Now;
