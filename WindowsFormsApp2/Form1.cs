@@ -1,13 +1,8 @@
 ﻿                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.ApplicationBlocks.Data;
 
@@ -194,12 +189,12 @@ namespace WindowsFormsApp2
         }
 
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void TabPage1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button_prevDay_Click(object sender, EventArgs e)
+        private void Button_prevDay_Click(object sender, EventArgs e)
         {
             dateTimePicker1.Value = dateTimePicker1.Value.AddDays(-1);
             // Console.WriteLine(dateTimePicker1.Value.ToString());
@@ -210,7 +205,7 @@ namespace WindowsFormsApp2
             dateTimePicker1.Value = dateTimePicker1.Value.AddDays(1);
         }
 
-        private void button_prevWeek_Click(object sender, EventArgs e)
+        private void Button_prevWeek_Click(object sender, EventArgs e)
         {
             dateTimePicker2.Value = dateTimePicker2.Value.AddDays(-7);
             #region update tab2
@@ -391,7 +386,7 @@ namespace WindowsFormsApp2
         }
 
 
-        private void dateTimePicker1_ValueChanged(Object sender, EventArgs e)
+        private void DateTimePicker1_ValueChanged(Object sender, EventArgs e)
         {
             // MessageBox.Show("You are in the DateTimePicker.ValueChanged event.");
             DayOffOrNot(dateTimePicker1.Value, Table_Holiday);
@@ -402,7 +397,7 @@ namespace WindowsFormsApp2
         Control sourceControl = null;
 
 
-        private void day_busy_MenuStrip_Opened(object sender, EventArgs e)
+        private void Day_busy_MenuStrip_Opened(object sender, EventArgs e)
         {
             sourceControl = day_busy_MenuStrip.SourceControl;
         }
@@ -414,25 +409,25 @@ namespace WindowsFormsApp2
         }
 
         // 詳細
-        private void day_detail_ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Day_detail_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Console.WriteLine(sourceControl.Name);
         }
 
 
-        private void day_free_MenuStrip_Opened(object sender, EventArgs e)
+        private void Day_free_MenuStrip_Opened(object sender, EventArgs e)
         {
             sourceControl = day_free_MenuStrip.SourceControl;
         }
 
-        private void day_free_MenuStrip_Click(object sender, EventArgs e)
+        private void Day_free_MenuStrip_Click(object sender, EventArgs e)
         {
             var menuStrip = (ContextMenuStrip)sender;
             Console.WriteLine(menuStrip.Name);
             Console.WriteLine(sourceControl);
         }
 
-        private void day_add_ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Day_add_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_add form_Add = new Form_add(this);
             form_Add.ShowDialog();

@@ -117,7 +117,7 @@ namespace WindowsFormsApp2
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "每日";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.tabPage1.Click += new System.EventHandler(this.TabPage1_Click);
             // 
             // panel1
             // 
@@ -153,7 +153,7 @@ namespace WindowsFormsApp2
             this.dateTimePicker1.Size = new System.Drawing.Size(110, 22);
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.Value = new System.DateTime(2020, 8, 5, 0, 0, 0, 0);
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
             // 
             // button_nextDay
             // 
@@ -176,7 +176,7 @@ namespace WindowsFormsApp2
             this.button_prevDay.TabIndex = 1;
             this.button_prevDay.Text = "<<";
             this.button_prevDay.UseVisualStyleBackColor = true;
-            this.button_prevDay.Click += new System.EventHandler(this.button_prevDay_Click);
+            this.button_prevDay.Click += new System.EventHandler(this.Button_prevDay_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -429,14 +429,14 @@ namespace WindowsFormsApp2
             this.day_add_ToolStripMenuItem});
             this.day_free_MenuStrip.Name = "day_MenuStrip2";
             this.day_free_MenuStrip.Size = new System.Drawing.Size(99, 26);
-            this.day_free_MenuStrip.Click += new System.EventHandler(this.day_free_MenuStrip_Click);
+            this.day_free_MenuStrip.Click += new System.EventHandler(this.Day_free_MenuStrip_Click);
             // 
             // day_add_ToolStripMenuItem
             // 
             this.day_add_ToolStripMenuItem.Name = "day_add_ToolStripMenuItem";
             this.day_add_ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.day_add_ToolStripMenuItem.Text = "新增";
-            this.day_add_ToolStripMenuItem.Click += new System.EventHandler(this.day_add_ToolStripMenuItem_Click);
+            this.day_add_ToolStripMenuItem.Click += new System.EventHandler(this.Day_add_ToolStripMenuItem_Click);
             // 
             // Cell10
             // 
@@ -733,7 +733,7 @@ namespace WindowsFormsApp2
             this.button_prevWeek.TabIndex = 1;
             this.button_prevWeek.Text = "上一週";
             this.button_prevWeek.UseVisualStyleBackColor = true;
-            this.button_prevWeek.Click += new System.EventHandler(this.button_prevWeek_Click);
+            this.button_prevWeek.Click += new System.EventHandler(this.Button_prevWeek_Click);
             // 
             // day_busy_MenuStrip
             // 
@@ -743,7 +743,7 @@ namespace WindowsFormsApp2
             this.day_del_ToolStripMenuItem});
             this.day_busy_MenuStrip.Name = "day_busy_MenuStrip";
             this.day_busy_MenuStrip.Size = new System.Drawing.Size(99, 70);
-            this.day_busy_MenuStrip.Opened += new System.EventHandler(this.day_busy_MenuStrip_Opened);
+            this.day_busy_MenuStrip.Opened += new System.EventHandler(this.Day_busy_MenuStrip_Opened);
             this.day_busy_MenuStrip.Click += new System.EventHandler(this.day_busy_MenuStrip_Click);
             // 
             // day_detail_ToolStripMenuItem
@@ -751,7 +751,7 @@ namespace WindowsFormsApp2
             this.day_detail_ToolStripMenuItem.Name = "day_detail_ToolStripMenuItem";
             this.day_detail_ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.day_detail_ToolStripMenuItem.Text = "詳情";
-            this.day_detail_ToolStripMenuItem.Click += new System.EventHandler(this.day_detail_ToolStripMenuItem_Click);
+            this.day_detail_ToolStripMenuItem.Click += new System.EventHandler(this.Day_detail_ToolStripMenuItem_Click);
             // 
             // day_edit_ToolStripMenuItem
             // 
