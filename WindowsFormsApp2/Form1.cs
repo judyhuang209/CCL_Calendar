@@ -162,13 +162,13 @@ namespace WindowsFormsApp2
                 tableLayoutPanel1.AutoScrollPosition = p;
 
                 #region initial tab2
-                weekday1.Text = dateTimePicker2.Value.ToString("yyyy/MM/dd ddd");
-                weekday2.Text = dateTimePicker2.Value.AddDays(1).ToString("yyyy/MM/dd ddd");
-                weekday3.Text = dateTimePicker2.Value.AddDays(2).ToString("yyyy/MM/dd ddd");
-                weekday4.Text = dateTimePicker2.Value.AddDays(3).ToString("yyyy/MM/dd ddd");
-                weekday5.Text = dateTimePicker2.Value.AddDays(4).ToString("yyyy/MM/dd ddd");
-                weekday6.Text = dateTimePicker2.Value.AddDays(5).ToString("yyyy/MM/dd ddd");
-                weekday7.Text = dateTimePicker2.Value.AddDays(6).ToString("yyyy/MM/dd ddd");
+                weekday1.Text = DateTimePicker2.Value.ToString("yyyy/MM/dd ddd");
+                weekday2.Text = DateTimePicker2.Value.AddDays(1).ToString("yyyy/MM/dd ddd");
+                weekday3.Text = DateTimePicker2.Value.AddDays(2).ToString("yyyy/MM/dd ddd");
+                weekday4.Text = DateTimePicker2.Value.AddDays(3).ToString("yyyy/MM/dd ddd");
+                weekday5.Text = DateTimePicker2.Value.AddDays(4).ToString("yyyy/MM/dd ddd");
+                weekday6.Text = DateTimePicker2.Value.AddDays(5).ToString("yyyy/MM/dd ddd");
+                weekday7.Text = DateTimePicker2.Value.AddDays(6).ToString("yyyy/MM/dd ddd");
                 #endregion
 
                 listCell = new List<FlowLayoutPanel>
@@ -177,8 +177,8 @@ namespace WindowsFormsApp2
                     Cell15, Cell16, Cell17, Cell18, Cell19, Cell20
                 };
 
-                DayOffOrNot(dateTimePicker1.Value, Table_Holiday);
-                SectionOffOrNot(dateTimePicker1.Value, Table_Holiday_Per, Table_Personal);
+                DayOffOrNot(DateTimePicker1.Value, Table_Holiday);
+                SectionOffOrNot(DateTimePicker1.Value, Table_Holiday_Per, Table_Personal);
 
             }
             catch (Exception ex)
@@ -194,44 +194,44 @@ namespace WindowsFormsApp2
 
         }
 
-        private void Button_prevDay_Click(object sender, EventArgs e)
+        private void Button_PrevDay_Click(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = dateTimePicker1.Value.AddDays(-1);
+            DateTimePicker1.Value = DateTimePicker1.Value.AddDays(-1);
             // Console.WriteLine(dateTimePicker1.Value.ToString());
         }
 
-        private void button_nextDay_Click(object sender, EventArgs e)
+        private void Button_NextDay_Click(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = dateTimePicker1.Value.AddDays(1);
+            DateTimePicker1.Value = DateTimePicker1.Value.AddDays(1);
         }
 
         private void Button_prevWeek_Click(object sender, EventArgs e)
         {
-            dateTimePicker2.Value = dateTimePicker2.Value.AddDays(-7);
+            DateTimePicker2.Value = DateTimePicker2.Value.AddDays(-7);
             #region update tab2
-            weekday1.Text = dateTimePicker2.Value.ToString("yyyy/MM/dd ddd");
+            weekday1.Text = DateTimePicker2.Value.ToString("yyyy/MM/dd ddd");
             // Console.WriteLine(weekday1.Text);
-            weekday2.Text = dateTimePicker2.Value.AddDays(1).ToString("yyyy/MM/dd ddd");
-            weekday3.Text = dateTimePicker2.Value.AddDays(2).ToString("yyyy/MM/dd ddd");
-            weekday4.Text = dateTimePicker2.Value.AddDays(3).ToString("yyyy/MM/dd ddd");
-            weekday5.Text = dateTimePicker2.Value.AddDays(4).ToString("yyyy/MM/dd ddd");
-            weekday6.Text = dateTimePicker2.Value.AddDays(5).ToString("yyyy/MM/dd ddd");
-            weekday7.Text = dateTimePicker2.Value.AddDays(6).ToString("yyyy/MM/dd ddd");
+            weekday2.Text = DateTimePicker2.Value.AddDays(1).ToString("yyyy/MM/dd ddd");
+            weekday3.Text = DateTimePicker2.Value.AddDays(2).ToString("yyyy/MM/dd ddd");
+            weekday4.Text = DateTimePicker2.Value.AddDays(3).ToString("yyyy/MM/dd ddd");
+            weekday5.Text = DateTimePicker2.Value.AddDays(4).ToString("yyyy/MM/dd ddd");
+            weekday6.Text = DateTimePicker2.Value.AddDays(5).ToString("yyyy/MM/dd ddd");
+            weekday7.Text = DateTimePicker2.Value.AddDays(6).ToString("yyyy/MM/dd ddd");
             #endregion
         }
 
-        private void button_nextWeek_Click(object sender, EventArgs e)
+        private void Button_nextWeek_Click(object sender, EventArgs e)
         {
-            dateTimePicker2.Value = dateTimePicker2.Value.AddDays(7);
+            DateTimePicker2.Value = DateTimePicker2.Value.AddDays(7);
             #region update tab2
-            weekday1.Text = dateTimePicker2.Value.ToString("yyyy/MM/dd ddd");
+            weekday1.Text = DateTimePicker2.Value.ToString("yyyy/MM/dd ddd");
             // Console.WriteLine(weekday1.Text);
-            weekday2.Text = dateTimePicker2.Value.AddDays(1).ToString("yyyy/MM/dd ddd");
-            weekday3.Text = dateTimePicker2.Value.AddDays(2).ToString("yyyy/MM/dd ddd");
-            weekday4.Text = dateTimePicker2.Value.AddDays(3).ToString("yyyy/MM/dd ddd");
-            weekday5.Text = dateTimePicker2.Value.AddDays(4).ToString("yyyy/MM/dd ddd");
-            weekday6.Text = dateTimePicker2.Value.AddDays(5).ToString("yyyy/MM/dd ddd");
-            weekday7.Text = dateTimePicker2.Value.AddDays(6).ToString("yyyy/MM/dd ddd");
+            weekday2.Text = DateTimePicker2.Value.AddDays(1).ToString("yyyy/MM/dd ddd");
+            weekday3.Text = DateTimePicker2.Value.AddDays(2).ToString("yyyy/MM/dd ddd");
+            weekday4.Text = DateTimePicker2.Value.AddDays(3).ToString("yyyy/MM/dd ddd");
+            weekday5.Text = DateTimePicker2.Value.AddDays(4).ToString("yyyy/MM/dd ddd");
+            weekday6.Text = DateTimePicker2.Value.AddDays(5).ToString("yyyy/MM/dd ddd");
+            weekday7.Text = DateTimePicker2.Value.AddDays(6).ToString("yyyy/MM/dd ddd");
             #endregion
         }
 
@@ -325,15 +325,15 @@ namespace WindowsFormsApp2
                 {
                     DisableTable();
                     Console.WriteLine("table disabled");
-                    labelDayOff.Visible = true;
-                    labelDayOff.Text = row[0].ToString();
+                    LabelDayOff.Visible = true;
+                    LabelDayOff.Text = row[0].ToString();
                     // Console.WriteLine(labelDayOff.Text);
                     break;
                 }
                 else if (row == Table.Rows[Table.Rows.Count-1])
                 {
                     EnableTable();
-                    labelDayOff.Visible = false;
+                    LabelDayOff.Visible = false;
                 }
                 // String HolidayType = row["Type"].ToString();
                 // String HolidayNote = row["Note"].ToString();
@@ -389,8 +389,8 @@ namespace WindowsFormsApp2
         private void DateTimePicker1_ValueChanged(Object sender, EventArgs e)
         {
             // MessageBox.Show("You are in the DateTimePicker.ValueChanged event.");
-            DayOffOrNot(dateTimePicker1.Value, Table_Holiday);
-            SectionOffOrNot(dateTimePicker1.Value, Table_Holiday_Per, Table_Personal);
+            DayOffOrNot(DateTimePicker1.Value, Table_Holiday);
+            SectionOffOrNot(DateTimePicker1.Value, Table_Holiday_Per, Table_Personal);
 
         }
 

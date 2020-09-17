@@ -32,13 +32,13 @@ namespace WindowsFormsApp2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dayOrWeek = new System.Windows.Forms.TabControl();
+            this.DayOrWeek = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelDayOff = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button_nextDay = new System.Windows.Forms.Button();
-            this.button_prevDay = new System.Windows.Forms.Button();
+            this.LabelDayOff = new System.Windows.Forms.Label();
+            this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Button_NextDay = new System.Windows.Forms.Button();
+            this.Button_PrevDay = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.section10_11 = new System.Windows.Forms.Label();
             this.section11_12 = new System.Windows.Forms.Label();
@@ -76,14 +76,14 @@ namespace WindowsFormsApp2
             this.weekday6 = new System.Windows.Forms.Label();
             this.weekday7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button_nextWeek = new System.Windows.Forms.Button();
-            this.button_prevWeek = new System.Windows.Forms.Button();
+            this.DateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.Button_NextWeek = new System.Windows.Forms.Button();
+            this.Button_PrevWeek = new System.Windows.Forms.Button();
             this.day_busy_MenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.day_detail_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.day_edit_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.day_del_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dayOrWeek.SuspendLayout();
+            this.DayOrWeek.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -94,16 +94,16 @@ namespace WindowsFormsApp2
             this.day_busy_MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dayOrWeek
+            // DayOrWeek
             // 
-            this.dayOrWeek.Controls.Add(this.tabPage1);
-            this.dayOrWeek.Controls.Add(this.tabPage2);
-            this.dayOrWeek.Location = new System.Drawing.Point(8, 9);
-            this.dayOrWeek.Margin = new System.Windows.Forms.Padding(2);
-            this.dayOrWeek.Name = "dayOrWeek";
-            this.dayOrWeek.SelectedIndex = 0;
-            this.dayOrWeek.Size = new System.Drawing.Size(807, 435);
-            this.dayOrWeek.TabIndex = 0;
+            this.DayOrWeek.Controls.Add(this.tabPage1);
+            this.DayOrWeek.Controls.Add(this.tabPage2);
+            this.DayOrWeek.Location = new System.Drawing.Point(8, 9);
+            this.DayOrWeek.Margin = new System.Windows.Forms.Padding(2);
+            this.DayOrWeek.Name = "DayOrWeek";
+            this.DayOrWeek.SelectedIndex = 0;
+            this.DayOrWeek.Size = new System.Drawing.Size(807, 435);
+            this.DayOrWeek.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -122,61 +122,61 @@ namespace WindowsFormsApp2
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.labelDayOff);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.button_nextDay);
-            this.panel1.Controls.Add(this.button_prevDay);
+            this.panel1.Controls.Add(this.LabelDayOff);
+            this.panel1.Controls.Add(this.DateTimePicker1);
+            this.panel1.Controls.Add(this.Button_NextDay);
+            this.panel1.Controls.Add(this.Button_PrevDay);
             this.panel1.Location = new System.Drawing.Point(2, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(797, 44);
             this.panel1.TabIndex = 1;
             // 
-            // labelDayOff
+            // LabelDayOff
             // 
-            this.labelDayOff.AutoSize = true;
-            this.labelDayOff.Enabled = false;
-            this.labelDayOff.Font = new System.Drawing.Font("新細明體", 15F);
-            this.labelDayOff.Location = new System.Drawing.Point(12, 11);
-            this.labelDayOff.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelDayOff.Name = "labelDayOff";
-            this.labelDayOff.Size = new System.Drawing.Size(101, 20);
-            this.labelDayOff.TabIndex = 3;
-            this.labelDayOff.Text = "labelDayOff";
-            this.labelDayOff.Visible = false;
+            this.LabelDayOff.AutoSize = true;
+            this.LabelDayOff.Enabled = false;
+            this.LabelDayOff.Font = new System.Drawing.Font("新細明體", 15F);
+            this.LabelDayOff.Location = new System.Drawing.Point(12, 11);
+            this.LabelDayOff.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelDayOff.Name = "LabelDayOff";
+            this.LabelDayOff.Size = new System.Drawing.Size(101, 20);
+            this.LabelDayOff.TabIndex = 3;
+            this.LabelDayOff.Text = "labelDayOff";
+            this.LabelDayOff.Visible = false;
             // 
-            // dateTimePicker1
+            // DateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(346, 11);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(110, 22);
-            this.dateTimePicker1.TabIndex = 2;
-            this.dateTimePicker1.Value = new System.DateTime(2020, 8, 5, 0, 0, 0, 0);
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
+            this.DateTimePicker1.Location = new System.Drawing.Point(346, 11);
+            this.DateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            this.DateTimePicker1.Name = "DateTimePicker1";
+            this.DateTimePicker1.Size = new System.Drawing.Size(110, 22);
+            this.DateTimePicker1.TabIndex = 2;
+            this.DateTimePicker1.Value = new System.DateTime(2020, 8, 5, 0, 0, 0, 0);
+            this.DateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
             // 
-            // button_nextDay
+            // Button_NextDay
             // 
-            this.button_nextDay.Location = new System.Drawing.Point(460, 11);
-            this.button_nextDay.Margin = new System.Windows.Forms.Padding(2);
-            this.button_nextDay.Name = "button_nextDay";
-            this.button_nextDay.Size = new System.Drawing.Size(34, 20);
-            this.button_nextDay.TabIndex = 1;
-            this.button_nextDay.Text = ">>";
-            this.button_nextDay.UseVisualStyleBackColor = true;
-            this.button_nextDay.Click += new System.EventHandler(this.button_nextDay_Click);
+            this.Button_NextDay.Location = new System.Drawing.Point(460, 11);
+            this.Button_NextDay.Margin = new System.Windows.Forms.Padding(2);
+            this.Button_NextDay.Name = "Button_NextDay";
+            this.Button_NextDay.Size = new System.Drawing.Size(34, 20);
+            this.Button_NextDay.TabIndex = 1;
+            this.Button_NextDay.Text = ">>";
+            this.Button_NextDay.UseVisualStyleBackColor = true;
+            this.Button_NextDay.Click += new System.EventHandler(this.Button_NextDay_Click);
             // 
-            // button_prevDay
+            // Button_PrevDay
             // 
-            this.button_prevDay.AutoSize = true;
-            this.button_prevDay.Location = new System.Drawing.Point(308, 11);
-            this.button_prevDay.Margin = new System.Windows.Forms.Padding(2);
-            this.button_prevDay.Name = "button_prevDay";
-            this.button_prevDay.Size = new System.Drawing.Size(34, 22);
-            this.button_prevDay.TabIndex = 1;
-            this.button_prevDay.Text = "<<";
-            this.button_prevDay.UseVisualStyleBackColor = true;
-            this.button_prevDay.Click += new System.EventHandler(this.Button_prevDay_Click);
+            this.Button_PrevDay.AutoSize = true;
+            this.Button_PrevDay.Location = new System.Drawing.Point(308, 11);
+            this.Button_PrevDay.Margin = new System.Windows.Forms.Padding(2);
+            this.Button_PrevDay.Name = "Button_PrevDay";
+            this.Button_PrevDay.Size = new System.Drawing.Size(34, 22);
+            this.Button_PrevDay.TabIndex = 1;
+            this.Button_PrevDay.Text = "<<";
+            this.Button_PrevDay.UseVisualStyleBackColor = true;
+            this.Button_PrevDay.Click += new System.EventHandler(this.Button_PrevDay_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -594,7 +594,7 @@ namespace WindowsFormsApp2
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
             this.tableLayoutPanel2.Controls.Add(this.weekday2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.weekday1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.weekday3, 2, 0);
@@ -685,7 +685,7 @@ namespace WindowsFormsApp2
             this.weekday7.Location = new System.Drawing.Point(736, 2);
             this.weekday7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.weekday7.Name = "weekday7";
-            this.weekday7.Size = new System.Drawing.Size(176, 29);
+            this.weekday7.Size = new System.Drawing.Size(182, 29);
             this.weekday7.TabIndex = 0;
             this.weekday7.Text = "weekday7";
             this.weekday7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -693,47 +693,47 @@ namespace WindowsFormsApp2
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.dateTimePicker2);
-            this.panel2.Controls.Add(this.button_nextWeek);
-            this.panel2.Controls.Add(this.button_prevWeek);
+            this.panel2.Controls.Add(this.DateTimePicker2);
+            this.panel2.Controls.Add(this.Button_NextWeek);
+            this.panel2.Controls.Add(this.Button_PrevWeek);
             this.panel2.Location = new System.Drawing.Point(2, 4);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(797, 44);
             this.panel2.TabIndex = 2;
             // 
-            // dateTimePicker2
+            // DateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(346, 11);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(110, 22);
-            this.dateTimePicker2.TabIndex = 2;
-            this.dateTimePicker2.Value = new System.DateTime(2020, 8, 5, 0, 0, 0, 0);
+            this.DateTimePicker2.Location = new System.Drawing.Point(346, 11);
+            this.DateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
+            this.DateTimePicker2.Name = "DateTimePicker2";
+            this.DateTimePicker2.Size = new System.Drawing.Size(110, 22);
+            this.DateTimePicker2.TabIndex = 2;
+            this.DateTimePicker2.Value = new System.DateTime(2020, 8, 5, 0, 0, 0, 0);
             // 
-            // button_nextWeek
+            // Button_NextWeek
             // 
-            this.button_nextWeek.AutoSize = true;
-            this.button_nextWeek.Location = new System.Drawing.Point(459, 11);
-            this.button_nextWeek.Margin = new System.Windows.Forms.Padding(2);
-            this.button_nextWeek.Name = "button_nextWeek";
-            this.button_nextWeek.Size = new System.Drawing.Size(51, 22);
-            this.button_nextWeek.TabIndex = 1;
-            this.button_nextWeek.Text = "下一週";
-            this.button_nextWeek.UseVisualStyleBackColor = true;
-            this.button_nextWeek.Click += new System.EventHandler(this.button_nextWeek_Click);
+            this.Button_NextWeek.AutoSize = true;
+            this.Button_NextWeek.Location = new System.Drawing.Point(459, 11);
+            this.Button_NextWeek.Margin = new System.Windows.Forms.Padding(2);
+            this.Button_NextWeek.Name = "Button_NextWeek";
+            this.Button_NextWeek.Size = new System.Drawing.Size(51, 22);
+            this.Button_NextWeek.TabIndex = 1;
+            this.Button_NextWeek.Text = "下一週";
+            this.Button_NextWeek.UseVisualStyleBackColor = true;
+            this.Button_NextWeek.Click += new System.EventHandler(this.Button_nextWeek_Click);
             // 
-            // button_prevWeek
+            // Button_PrevWeek
             // 
-            this.button_prevWeek.AutoSize = true;
-            this.button_prevWeek.Location = new System.Drawing.Point(293, 11);
-            this.button_prevWeek.Margin = new System.Windows.Forms.Padding(2);
-            this.button_prevWeek.Name = "button_prevWeek";
-            this.button_prevWeek.Size = new System.Drawing.Size(51, 22);
-            this.button_prevWeek.TabIndex = 1;
-            this.button_prevWeek.Text = "上一週";
-            this.button_prevWeek.UseVisualStyleBackColor = true;
-            this.button_prevWeek.Click += new System.EventHandler(this.Button_prevWeek_Click);
+            this.Button_PrevWeek.AutoSize = true;
+            this.Button_PrevWeek.Location = new System.Drawing.Point(293, 11);
+            this.Button_PrevWeek.Margin = new System.Windows.Forms.Padding(2);
+            this.Button_PrevWeek.Name = "Button_PrevWeek";
+            this.Button_PrevWeek.Size = new System.Drawing.Size(51, 22);
+            this.Button_PrevWeek.TabIndex = 1;
+            this.Button_PrevWeek.Text = "上一週";
+            this.Button_PrevWeek.UseVisualStyleBackColor = true;
+            this.Button_PrevWeek.Click += new System.EventHandler(this.Button_prevWeek_Click);
             // 
             // day_busy_MenuStrip
             // 
@@ -770,13 +770,13 @@ namespace WindowsFormsApp2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 454);
-            this.Controls.Add(this.dayOrWeek);
+            this.Controls.Add(this.DayOrWeek);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.RightToLeftLayout = true;
             this.Text = "行事曆";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.dayOrWeek.ResumeLayout(false);
+            this.DayOrWeek.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -796,12 +796,12 @@ namespace WindowsFormsApp2
 
         #endregion
 
-        private System.Windows.Forms.TabControl dayOrWeek;
+        private System.Windows.Forms.TabControl DayOrWeek;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button_nextDay;
-        private System.Windows.Forms.Button button_prevDay;
+        private System.Windows.Forms.Button Button_NextDay;
+        private System.Windows.Forms.Button Button_PrevDay;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label section10_11;
         private System.Windows.Forms.Label section11_12;
@@ -815,12 +815,12 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label section19_20;
         private System.Windows.Forms.Label section20_21;
         private System.Windows.Forms.Label section9_10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DateTimePicker1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Button button_nextWeek;
-        private System.Windows.Forms.Button button_prevWeek;
+        private System.Windows.Forms.DateTimePicker DateTimePicker2;
+        private System.Windows.Forms.Button Button_NextWeek;
+        private System.Windows.Forms.Button Button_PrevWeek;
         private System.Windows.Forms.Label weekday2;
         private System.Windows.Forms.Label weekday1;
         private System.Windows.Forms.Label weekday3;
@@ -828,7 +828,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label weekday5;
         private System.Windows.Forms.Label weekday6;
         private System.Windows.Forms.Label weekday7;
-        private System.Windows.Forms.Label labelDayOff;
+        private System.Windows.Forms.Label LabelDayOff;
         private System.Windows.Forms.FlowLayoutPanel Cell9;
         private System.Windows.Forms.FlowLayoutPanel Cell10;
         private System.Windows.Forms.FlowLayoutPanel Cell11;

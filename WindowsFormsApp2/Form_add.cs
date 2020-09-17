@@ -25,13 +25,12 @@ namespace WindowsFormsApp2
 
         private void button_confirm_Click(object sender, EventArgs e)
         {
-
-
             DateTime taskStartTime = startDatePicker.Value.Date + startTimePicker.Value.TimeOfDay;
             DateTime taskEndTime = endDatePicker.Value.Date + endTimePicker.Value.TimeOfDay;
             DateTime recordDate = DateTime.Now;
-            String text = textBox1.Text;
+            String text = NoteTextBox.Text;
             String AgentID = "103213";
+            String eventCategory = (string)EventTypeList.SelectedItem;
 
             String connStr = "";
             SqlConnection cnn;
@@ -43,7 +42,7 @@ namespace WindowsFormsApp2
 
                 // Fetch Personal Event data table
                 String strSQL = // "insert into Holiday_Date_Table " +
-                                "select PersonalEvent, StartTime, EndTime, RecordDate " +
+                                "select PersonalEvent, Note, StartTime, EndTime, RecordDate " +
                                 "from Calendar_PersonalEvent " +
                                 "where AgentID = '103213' " +
                                 "order by StartTime desc";
@@ -53,11 +52,12 @@ namespace WindowsFormsApp2
                 adapter.Fill(dataSet, "Personal");
 
                 strSQL = "insert into Calendar_PersonalEvent " +
-                                "(AgentID, PersonalEvent, StartTime, EndTime, RecordDate)" +
-                                "values (@AgentID, @text, @taskStartTime, @taskEndTime, @recordDate)";
+                                "(AgentID, PersonalEvent, Note, StartTime, EndTime, RecordDate)" +
+                                "values (@AgentID, @eventCategory, @text, @taskStartTime, @taskEndTime, @recordDate)";
  
                 adapter.InsertCommand = new SqlCommand(strSQL, cnn);
                 adapter.InsertCommand.Parameters.Add("@AgentID", SqlDbType.VarChar).Value = AgentID;
+                adapter.InsertCommand.Parameters.Add("@eventCategory", SqlDbType.NVarChar).Value = eventCategory;
                 adapter.InsertCommand.Parameters.Add("@text", SqlDbType.NVarChar).Value = text;
                 adapter.InsertCommand.Parameters.Add("@taskStartTime", SqlDbType.SmallDateTime).Value = taskStartTime;
                 adapter.InsertCommand.Parameters.Add("@taskEndTime", SqlDbType.SmallDateTime).Value = taskEndTime;
@@ -83,5 +83,6 @@ namespace WindowsFormsApp2
         {
             Update();
         }
+
     }
 }
