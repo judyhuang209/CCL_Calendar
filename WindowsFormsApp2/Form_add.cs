@@ -68,7 +68,6 @@ namespace WindowsFormsApp2
                 Console.WriteLine(taskStartTime);
                 Console.WriteLine(taskEndTime);
 
-                
                 cnn.Close();
                 this.Close();
 

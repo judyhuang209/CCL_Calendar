@@ -146,6 +146,18 @@ namespace WindowsFormsApp2
                 */
                 Table_Personal = SqlHelper.ExecuteDataset(cnn, "xsp_Calendar_PersonalEvent", new object[] { "103213" }).Tables[0];
 
+                // Fetch refreshTime 
+                String strSQL = "SELECT * " +
+                                "FROM TVProject_Parameter_Table " +
+                                "WHERE Auto_ID = '286'";
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                DataSet tempSet = new DataSet("Parameters");
+                adapter.SelectCommand = new SqlCommand(strSQL, cnn);
+                adapter.Fill(tempSet, "ParameterTable");
+                DataTable tempTable = tempSet.Tables["ParameterTable"];
+                int refreshTime = Convert.ToInt32(tempTable.Rows[0][2]);
+                // Console.WriteLine(tempTable.Rows[0][2]);
+
                 // PrintRows(dataSet);
                 ShowTable(Table_Personal);
 
@@ -177,17 +189,35 @@ namespace WindowsFormsApp2
                     Cell15, Cell16, Cell17, Cell18, Cell19, Cell20
                 };
 
-                DayOffOrNot(DateTimePicker1.Value, Table_Holiday);
-                SectionOffOrNot(DateTimePicker1.Value, Table_Holiday_Per, Table_Personal);
+                RefreshTable();
+
+                #region refresh form
+                Timer timer = new Timer();
+                timer.Interval = (refreshTime * 1000); // 10 secs
+                timer.Tick += new EventHandler(TimerTick);
+                timer.Start();
+                #endregion
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Connection failed!");
+                this.Close();
             }
 
         }
 
+        private void TimerTick(object sender, EventArgs e)
+        {
+            RefreshTable();
+            Console.WriteLine("Refreshed!");
+        }
+
+        private void RefreshTable()
+        {
+            DayOffOrNot(DateTimePicker1.Value, Table_Holiday);
+            SectionOffOrNot(DateTimePicker1.Value, Table_Holiday_Per, Table_Personal);
+        }
 
         private void TabPage1_Click(object sender, EventArgs e)
         {
@@ -396,7 +426,6 @@ namespace WindowsFormsApp2
 
         Control sourceControl = null;
 
-
         private void Day_busy_MenuStrip_Opened(object sender, EventArgs e)
         {
             sourceControl = day_busy_MenuStrip.SourceControl;
@@ -432,6 +461,8 @@ namespace WindowsFormsApp2
             Form_add form_Add = new Form_add(this);
             form_Add.ShowDialog();
         }
+
+
 
     }
 }
