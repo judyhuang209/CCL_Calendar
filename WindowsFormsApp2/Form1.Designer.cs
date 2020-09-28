@@ -594,7 +594,7 @@ namespace WindowsFormsApp2
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
             this.tableLayoutPanel2.Controls.Add(this.weekday2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.weekday1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.weekday3, 2, 0);
@@ -685,7 +685,7 @@ namespace WindowsFormsApp2
             this.weekday7.Location = new System.Drawing.Point(736, 2);
             this.weekday7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.weekday7.Name = "weekday7";
-            this.weekday7.Size = new System.Drawing.Size(182, 29);
+            this.weekday7.Size = new System.Drawing.Size(184, 29);
             this.weekday7.TabIndex = 0;
             this.weekday7.Text = "weekday7";
             this.weekday7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

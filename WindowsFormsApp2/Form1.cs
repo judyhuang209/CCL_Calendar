@@ -144,7 +144,7 @@ namespace WindowsFormsApp2
                 adapter.Fill(dataSet, "Personal");
                 Table_Personal = dataSet.Tables["Personal"];
                 */
-                Table_Personal = SqlHelper.ExecuteDataset(cnn, "xsp_Calendar_PersonalEvent", new object[] { "103213" }).Tables[0];
+                Table_Personal = SqlHelper.ExecuteDataset(cnn, "xsp_Calendar_PersonalActivity", new object[] { "103213" }).Tables[0];
 
                 // Fetch refreshTime 
                 String strSQL = "SELECT * " +
@@ -227,7 +227,6 @@ namespace WindowsFormsApp2
         private void Button_PrevDay_Click(object sender, EventArgs e)
         {
             DateTimePicker1.Value = DateTimePicker1.Value.AddDays(-1);
-            // Console.WriteLine(dateTimePicker1.Value.ToString());
         }
 
         private void Button_NextDay_Click(object sender, EventArgs e)
@@ -434,13 +433,14 @@ namespace WindowsFormsApp2
         {
             var menuStrip = (ContextMenuStrip)sender;
             Console.WriteLine(menuStrip.Name);
-            Console.WriteLine(sourceControl);
         }
 
         // 詳細
         private void Day_detail_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(sourceControl.Name);
+            Console.WriteLine(sourceControl.Controls);
+            // Console.WriteLine(listCell.IndexOf(sourceControl));
+
         }
 
 
