@@ -147,17 +147,17 @@ namespace WindowsFormsApp2
             // 
             // DateTimePicker1
             // 
-            this.DateTimePicker1.Location = new System.Drawing.Point(346, 11);
+            this.DateTimePicker1.Font = new System.Drawing.Font("新細明體", 15F);
+            this.DateTimePicker1.Location = new System.Drawing.Point(326, 6);
             this.DateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.DateTimePicker1.Name = "DateTimePicker1";
-            this.DateTimePicker1.Size = new System.Drawing.Size(110, 22);
+            this.DateTimePicker1.Size = new System.Drawing.Size(168, 31);
             this.DateTimePicker1.TabIndex = 2;
-            this.DateTimePicker1.Value = new System.DateTime(2020, 8, 5, 0, 0, 0, 0);
             this.DateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
             // 
             // Button_NextDay
             // 
-            this.Button_NextDay.Location = new System.Drawing.Point(460, 11);
+            this.Button_NextDay.Location = new System.Drawing.Point(498, 11);
             this.Button_NextDay.Margin = new System.Windows.Forms.Padding(2);
             this.Button_NextDay.Name = "Button_NextDay";
             this.Button_NextDay.Size = new System.Drawing.Size(34, 20);
@@ -169,7 +169,7 @@ namespace WindowsFormsApp2
             // Button_PrevDay
             // 
             this.Button_PrevDay.AutoSize = true;
-            this.Button_PrevDay.Location = new System.Drawing.Point(308, 11);
+            this.Button_PrevDay.Location = new System.Drawing.Point(288, 11);
             this.Button_PrevDay.Margin = new System.Windows.Forms.Padding(2);
             this.Button_PrevDay.Name = "Button_PrevDay";
             this.Button_PrevDay.Size = new System.Drawing.Size(34, 22);
@@ -238,7 +238,7 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section10_11.AutoSize = true;
-            this.section10_11.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section10_11.Font = new System.Drawing.Font("新細明體", 16F);
             this.section10_11.Location = new System.Drawing.Point(3, 41);
             this.section10_11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section10_11.Name = "section10_11";
@@ -253,7 +253,7 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section11_12.AutoSize = true;
-            this.section11_12.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section11_12.Font = new System.Drawing.Font("新細明體", 16F);
             this.section11_12.Location = new System.Drawing.Point(3, 83);
             this.section11_12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section11_12.Name = "section11_12";
@@ -268,7 +268,7 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section12_13.AutoSize = true;
-            this.section12_13.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section12_13.Font = new System.Drawing.Font("新細明體", 16F);
             this.section12_13.Location = new System.Drawing.Point(3, 124);
             this.section12_13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section12_13.Name = "section12_13";
@@ -283,7 +283,7 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section13_14.AutoSize = true;
-            this.section13_14.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section13_14.Font = new System.Drawing.Font("新細明體", 16F);
             this.section13_14.Location = new System.Drawing.Point(3, 165);
             this.section13_14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section13_14.Name = "section13_14";
@@ -298,7 +298,7 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section14_15.AutoSize = true;
-            this.section14_15.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section14_15.Font = new System.Drawing.Font("新細明體", 16F);
             this.section14_15.Location = new System.Drawing.Point(3, 206);
             this.section14_15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section14_15.Name = "section14_15";
@@ -313,7 +313,7 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section16_17.AutoSize = true;
-            this.section16_17.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section16_17.Font = new System.Drawing.Font("新細明體", 16F);
             this.section16_17.Location = new System.Drawing.Point(3, 288);
             this.section16_17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section16_17.Name = "section16_17";
@@ -328,7 +328,7 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section15_16.AutoSize = true;
-            this.section15_16.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section15_16.Font = new System.Drawing.Font("新細明體", 16F);
             this.section15_16.Location = new System.Drawing.Point(3, 247);
             this.section15_16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section15_16.Name = "section15_16";
@@ -343,7 +343,7 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section17_18.AutoSize = true;
-            this.section17_18.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section17_18.Font = new System.Drawing.Font("新細明體", 16F);
             this.section17_18.Location = new System.Drawing.Point(3, 329);
             this.section17_18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section17_18.Name = "section17_18";
@@ -358,7 +358,7 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section18_19.AutoSize = true;
-            this.section18_19.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section18_19.Font = new System.Drawing.Font("新細明體", 16F);
             this.section18_19.Location = new System.Drawing.Point(3, 370);
             this.section18_19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section18_19.Name = "section18_19";
@@ -373,7 +373,7 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section19_20.AutoSize = true;
-            this.section19_20.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section19_20.Font = new System.Drawing.Font("新細明體", 16F);
             this.section19_20.Location = new System.Drawing.Point(3, 411);
             this.section19_20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section19_20.Name = "section19_20";
@@ -388,7 +388,7 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section20_21.AutoSize = true;
-            this.section20_21.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section20_21.Font = new System.Drawing.Font("新細明體", 16F);
             this.section20_21.Location = new System.Drawing.Point(3, 452);
             this.section20_21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section20_21.Name = "section20_21";
@@ -401,7 +401,7 @@ namespace WindowsFormsApp2
             // 
             this.section9_10.AutoSize = true;
             this.section9_10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.section9_10.Font = new System.Drawing.Font("新細明體", 12F);
+            this.section9_10.Font = new System.Drawing.Font("新細明體", 16F);
             this.section9_10.Location = new System.Drawing.Point(3, 1);
             this.section9_10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.section9_10.Name = "section9_10";
@@ -594,7 +594,7 @@ namespace WindowsFormsApp2
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
             this.tableLayoutPanel2.Controls.Add(this.weekday2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.weekday1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.weekday3, 2, 0);
@@ -685,7 +685,7 @@ namespace WindowsFormsApp2
             this.weekday7.Location = new System.Drawing.Point(736, 2);
             this.weekday7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.weekday7.Name = "weekday7";
-            this.weekday7.Size = new System.Drawing.Size(184, 29);
+            this.weekday7.Size = new System.Drawing.Size(190, 29);
             this.weekday7.TabIndex = 0;
             this.weekday7.Text = "weekday7";
             this.weekday7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

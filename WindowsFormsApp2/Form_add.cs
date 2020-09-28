@@ -25,9 +25,12 @@ namespace WindowsFormsApp2
 
         private void button_confirm_Click(object sender, EventArgs e)
         {
+            // Default value set to the timesection which is clicked
             DateTime taskStartTime = startDatePicker.Value.Date + startTimePicker.Value.TimeOfDay;
             DateTime taskEndTime = endDatePicker.Value.Date + endTimePicker.Value.TimeOfDay;
             DateTime recordDate = DateTime.Now;
+            DateTime activityDate = taskStartTime.Date;
+
             String text = NoteTextBox.Text;
             String AgentID = "103213";
             String eventCategory = (string)EventTypeList.SelectedItem;
@@ -42,21 +45,21 @@ namespace WindowsFormsApp2
 
                 // Fetch Personal Event data table
                 String strSQL = // "insert into Holiday_Date_Table " +
-                                "select PersonalEvent, Note, StartTime, EndTime, RecordDate " +
-                                "from Calendar_PersonalEvent " +
-                                "where AgentID = '103213' " +
-                                "order by StartTime desc";
+                                "select ActivityDate, EventName, Description, StartTime, EndTime, CreateDate " +
+                                "from Calendar_PersonalActivity " +
+                                "where UserID = '103213' ";
                 DataSet dataSet = new DataSet("Temp");
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 adapter.SelectCommand = new SqlCommand(strSQL, cnn);
                 adapter.Fill(dataSet, "Personal");
 
-                strSQL = "insert into Calendar_PersonalEvent " +
-                                "(AgentID, PersonalEvent, Note, StartTime, EndTime, RecordDate)" +
-                                "values (@AgentID, @eventCategory, @text, @taskStartTime, @taskEndTime, @recordDate)";
+                strSQL = "insert into Calendar_PersonalActivity " +
+                                "(ActivityDate, UserID, EventName, Description, StartTime, EndTime, CreateDate)" +
+                                "values (@ActivityDate, @UserID, @eventCategory, @text, @taskStartTime, @taskEndTime, @recordDate)";
  
                 adapter.InsertCommand = new SqlCommand(strSQL, cnn);
-                adapter.InsertCommand.Parameters.Add("@AgentID", SqlDbType.VarChar).Value = AgentID;
+                adapter.InsertCommand.Parameters.Add("@ActivityDate", SqlDbType.SmallDateTime).Value = activityDate;
+                adapter.InsertCommand.Parameters.Add("@UserID", SqlDbType.VarChar).Value = AgentID;
                 adapter.InsertCommand.Parameters.Add("@eventCategory", SqlDbType.NVarChar).Value = eventCategory;
                 adapter.InsertCommand.Parameters.Add("@text", SqlDbType.NVarChar).Value = text;
                 adapter.InsertCommand.Parameters.Add("@taskStartTime", SqlDbType.SmallDateTime).Value = taskStartTime;

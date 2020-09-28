@@ -131,7 +131,7 @@ namespace WindowsFormsApp2
                 // Table_Holiday_Per = dataSet.Tables["Holiday_Per"];
                 Table_Holiday_Per = SqlHelper.ExecuteDataset(cnn, "xsp_Calendar_Holiday", new object[] { "103213" }).Tables[0];
 
-                // Fetch Personal Event data table
+                // Fetch Personal Activity data table
                 /*String strSQL = // "insert into Holiday_Date_Table " +
                          "select PersonalEvent, StartTime, EndTime, RecordDate " +
                          "from Calendar_PersonalEvent " +
@@ -197,7 +197,6 @@ namespace WindowsFormsApp2
                 timer.Tick += new EventHandler(TimerTick);
                 timer.Start();
                 #endregion
-
             }
             catch (Exception ex)
             {
@@ -280,10 +279,12 @@ namespace WindowsFormsApp2
         private void DisableSection(int Start, int End, List<FlowLayoutPanel> listCell, String str)
         {
             Console.WriteLine(Start);
+            // new panel + label
             for (int i = Start; i<End; i++)
             {
                 Label EventName = new System.Windows.Forms.Label();
                 EventName.Text = str;
+                EventName.Font = new System.Drawing.Font("新細明體", 16F);
                 listCell[i - 9].BackColor = Color.Pink;
                 // listCell[i - 9].Enabled = false;
                 listCell[i - 9].Controls.Add(EventName);
@@ -423,8 +424,8 @@ namespace WindowsFormsApp2
 
         }
 
-        Control sourceControl = null;
 
+        Control sourceControl = null;
         private void Day_busy_MenuStrip_Opened(object sender, EventArgs e)
         {
             sourceControl = day_busy_MenuStrip.SourceControl;
@@ -439,7 +440,7 @@ namespace WindowsFormsApp2
         private void Day_detail_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Console.WriteLine(sourceControl.Controls);
-            // Console.WriteLine(listCell.IndexOf(sourceControl));
+            Console.WriteLine(sourceControl.TabIndex);
 
         }
 
