@@ -214,6 +214,7 @@ namespace WindowsFormsApp2
 
         private void RefreshTable()
         {
+            EnableSection();
             DayOffOrNot(DateTimePicker1.Value, Table_Holiday);
             SectionOffOrNot(DateTimePicker1.Value, Table_Holiday_Per, Table_Personal);
         }
@@ -276,19 +277,47 @@ namespace WindowsFormsApp2
             tableLayoutPanel1.Enabled = true;
         }
 
-        private void DisableSection(int Start, int End, List<FlowLayoutPanel> listCell, String str)
+        private void DisableSection(DateTime startTime, DateTime endTime, List<FlowLayoutPanel> listCell, String str)
         {
-            Console.WriteLine(Start);
+            Console.WriteLine(startTime);
             // new panel + label
-            for (int i = Start; i<End; i++)
+            List<FlowLayoutPanel> taskPanels = new List<FlowLayoutPanel> { };
+            String temp = startTime.ToString("HH");
+            int Start = Int32.Parse(temp);
+            temp = endTime.ToString("HH");
+            int End = Int32.Parse(temp);
+
+            for (int i = Start,j = 1; ; i++, j++)
             {
+                FlowLayoutPanel taskPanel = new FlowLayoutPanel();
+                taskPanel.Name = "tp" + i.ToString() + "_" + j.ToString();
+                taskPanel.AutoSize = true;
+
+                // create labels
                 Label EventName = new System.Windows.Forms.Label();
                 EventName.Text = str;
                 EventName.Font = new System.Drawing.Font("新細明體", 16F);
-                listCell[i - 9].BackColor = Color.Pink;
+                EventName.Name = "eventLabel" + j.ToString();
+                taskPanel.Controls.Add(EventName);
+
+                Label EventTime = new System.Windows.Forms.Label();
+                EventTime.Text = "時間： " + startTime.ToShortDateString() + " " + startTime.ToShortTimeString()
+                                + " ~ " + endTime.ToShortTimeString();
+                EventTime.Font = new System.Drawing.Font("新細明體", 16F);
+                EventTime.Name = "timeLabel" + j.ToString();
+                EventTime.Visible = false;
+                taskPanel.Controls.Add(EventTime);
+
+                // EventName.Text
+
+                taskPanel.BackColor = Color.Pink;
+                taskPanel.ContextMenuStrip = day_busy_MenuStrip;
                 // listCell[i - 9].Enabled = false;
-                listCell[i - 9].Controls.Add(EventName);
-                listCell[i - 9].ContextMenuStrip = day_busy_MenuStrip;
+                listCell[i - 9].Controls.Add(taskPanel);
+            
+
+                if (i == End)
+                    break;
             }
         }
 
@@ -373,7 +402,8 @@ namespace WindowsFormsApp2
 
         private void SectionOffOrNot(DateTime DateToday, DataTable Table1, DataTable Table2)
         {
-            EnableSection();
+            // EnableSection();
+
             foreach (DataRow row in Table1.Rows)
             {
                 // check if date today is holiday
@@ -387,8 +417,8 @@ namespace WindowsFormsApp2
                     int start = Int32.Parse(temp);
                     temp = endTime.ToString("HH");
                     int end = Int32.Parse(temp);
-                    DisableSection(start, end, listCell, row[0].ToString());
-                    break;
+                    DisableSection(startTime, endTime, listCell, row[0].ToString());
+                    
                 }
                 // String HolidayType = row["Type"].ToString();
                 // String HolidayNote = row["Note"].ToString();
@@ -406,8 +436,8 @@ namespace WindowsFormsApp2
                     int start = Int32.Parse(temp);
                     temp = endTime.ToString("HH");
                     int end = Int32.Parse(temp);
-                    DisableSection(start, end, listCell, row[0].ToString());
-                    break;
+                    DisableSection(startTime, endTime, listCell, row[0].ToString());
+                    
                 }
                 // String HolidayType = row["Type"].ToString();
                 // String HolidayNote = row["Note"].ToString();
@@ -418,10 +448,11 @@ namespace WindowsFormsApp2
 
         private void DateTimePicker1_ValueChanged(Object sender, EventArgs e)
         {
+            EnableSection();
             // MessageBox.Show("You are in the DateTimePicker.ValueChanged event.");
             DayOffOrNot(DateTimePicker1.Value, Table_Holiday);
             SectionOffOrNot(DateTimePicker1.Value, Table_Holiday_Per, Table_Personal);
-
+            
         }
 
 
@@ -462,7 +493,6 @@ namespace WindowsFormsApp2
             Form_add form_Add = new Form_add(this);
             form_Add.ShowDialog();
         }
-
 
 
     }
