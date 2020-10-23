@@ -315,7 +315,6 @@ namespace WindowsFormsApp2
                 // listCell[i - 9].Enabled = false;
                 listCell[i - 9].Controls.Add(taskPanel);
             
-
                 if (i == End)
                     break;
             }
